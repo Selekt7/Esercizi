@@ -31,6 +31,23 @@ public class Main {
 
         // Start your code here
 
+
+        //check the starting score
+        yourScore=text.length();
+        //set the maximum starting score if it's over 20
+        if (yourScore>20){
+            yourScore= 20;
+        }
+        if(text.contains("a")){
+            yourScore -= 5;
+        }
+        if(text.toLowerCase()==text){
+            yourScore += 10;
+        }
+        if (yourScore>20){
+            yourScore *=2;
+        }
+
         // End it here
 
         System.out.print("Expected score=" + expectedScore +", actual score=" + yourScore);
@@ -55,6 +72,14 @@ public class Main {
     public static double exercise2(String mealType, double weight, double expectedScore) {
         double yourMealScore = 0;
         // Start your code here
+        switch (mealType){
+            case "sandwich" -> yourMealScore= weight*5;
+            case "soup" -> yourMealScore= weight*3;
+        }
+        if(yourMealScore<5){
+            yourMealScore=5;
+        }
+
 
         // End it here
 
