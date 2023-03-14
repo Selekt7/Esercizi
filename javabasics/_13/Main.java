@@ -65,7 +65,7 @@ public class Main {
         System.out.println("The price of the "+ menuItems.get(1)+" is "+menuPrices.get(1));
         System.out.println("The price of the "+ menuItems.get(2)+" is "+menuPrices.get(2));
         /*
-        Maybe better like below. I know we didn't study yet the for loop,
+        Maybe better like below. I know we didn't study the for loop yet,
         but I search on Google the syntax differences. I think the logic behind is equals.
          */
 
