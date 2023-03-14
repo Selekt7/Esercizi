@@ -68,8 +68,8 @@ public class Main {
         Maybe better like below. I know we didn't study yet the for loop,
         but I search on Google the syntax differences. I think the logic behind is equals.
          */
-        int i=0;
-        for ( i=0; i<3; i++){
+
+        for (int i = 0; i<3; i++){
             System.out.println("The price of the "+ menuItems.get(i)+" is "+menuPrices.get(i));
         }
     }
