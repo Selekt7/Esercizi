@@ -58,7 +58,7 @@ public class Main {
         double eurosForEntry = 10;
 
         // Write your code here
-        if( shoeType=="fancy"&& age>18 && eurosInPocket>=eurosForEntry){
+        if(shoeType.equals("fancy") && age>18 && eurosInPocket>=eurosForEntry){
             System.out.println("Come in");
         }else {
             System.out.println("Stay out");
