@@ -29,9 +29,9 @@ public class Main {
         int sumForA = 0;
 
         // Write your code for 1a here
-        for (Integer sum: itemsA
-             ) {
-            sumForA += sum ;
+        for (Integer sum : itemsA
+        ) {
+            sumForA += sum;
         }
         System.out.println(sumForA);
         //---------------------//
@@ -41,9 +41,9 @@ public class Main {
         int sumForB = 0;
 
         // Write your code for 1b here
-        for (Integer sum: itemsB
+        for (Integer sum : itemsB
         ) {
-            sumForB += sum ;
+            sumForB += sum;
         }
         System.out.println(sumForB);
         //-----------------------//
@@ -52,9 +52,9 @@ public class Main {
         int sumForC = 0;
 
         // Write your code for 1c here, refer back to the lesson to check the fori syntax
-        for(int i=0; i<itemsA.size(); i++) {
+        for (int i = 0; i < itemsA.size(); i++) {
             sumForC += itemsA.get(i);
-            }
+        }
         System.out.println(sumForC);
 
         if (sumForA != sumForB || sumForB != sumForC) {
@@ -63,7 +63,6 @@ public class Main {
             System.out.println("Success, sums are the same!");
         }
     }
-
 
 
     /**
@@ -76,15 +75,15 @@ public class Main {
         int maxNumber = 0;
 
         // Write code here
-        for (Integer i: items) {
-            if (minNumber>i){
-                minNumber=i;
+        for (Integer i : items) {
+            if (minNumber > i) {
+                minNumber = i;
             }
-            if(maxNumber<i){
-                maxNumber=i;
+            if (maxNumber < i) {
+                maxNumber = i;
             }
         }
-        System.out.println("The smallest number of the list is "+minNumber+". The greatest number of the list is "+maxNumber);
+        System.out.println("The smallest number of the list is " + minNumber + ". The greatest number of the list is " + maxNumber);
     }
 
     /**
@@ -109,7 +108,7 @@ public class Main {
      * <p>
      * Multiplication tables, in case my vocabulary is different:
      * <a href="https://i.pinimg.com/originals/e0/ca/5f/e0ca5f21a16a02edbba8b758e7aa4af5.jpg">
-     *      https://i.pinimg.com/originals/e0/ca/5f/e0ca5f21a16a02edbba8b758e7aa4af5.jpg
+     * https://i.pinimg.com/originals/e0/ca/5f/e0ca5f21a16a02edbba8b758e7aa4af5.jpg
      * </a>
      */
     private static void exercise4() {
@@ -119,15 +118,15 @@ public class Main {
                 timesTableCurrentValue = timesTableCurrentValue + 8 // <---- Edit this line
         ) {
             System.out.println(timesTableCurrentValue);
-          }
-        int multiplyer= 7;
+        }
+        int multiplyer = 7;
         for (
                 int timesTableCurrentValue = multiplyer; // <---- Edit this line
-                timesTableCurrentValue <= 10*multiplyer; // <---- Edit this line
+                timesTableCurrentValue <= 10 * multiplyer; // <---- Edit this line
                 timesTableCurrentValue = timesTableCurrentValue + multiplyer // <---- Edit this line
         ) {
             System.out.println(timesTableCurrentValue);
-          }
+        }
     }
 
     /**
@@ -135,16 +134,16 @@ public class Main {
      * -------------------------------------------------------------------------<br/>
      * Inside of the fori loop below, write another fori loop to complete all
      * the multiplication tables between 1-10.
-     *
+     * <p>
      * i.e. 5  = 5,10,15,20,25,30,35,40,45,50
-     *
+     * <p>
      * When a loop in inside a loop, we call this a nested loop
      */
     private static void exercise5() {
         for (int timesTableNumber = 1; timesTableNumber <= 10; timesTableNumber++) {
             // Your fori loop here
-            int number= timesTableNumber;
-           for (int i =number; i<=10*number; i +=number){
+            int number = timesTableNumber;
+            for (int i = number; i <= 10 * number; i += number) {
                 System.out.println(i);
             }
         }
