@@ -52,7 +52,7 @@ public class Main {
      *    2c: Money in a hedgefund in euros                                       long or float
      *    2d: Price of a good in euros on amazon.com                              float
      *    2e: The exact weight of an apple measured by scientific equipment       double
-     *    2f: The number of kilometers from any 2 places in the world             in order to consider the meters too, I can use the Double. If I consider only the km, maybe I use int
+     *    2f: The number of kilometers from any 2 places in the world             in order to consider the meters too, I can use the Double. If I consider only the km, maybe I use short
      */
 
 
