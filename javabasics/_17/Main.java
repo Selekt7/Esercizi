@@ -1,5 +1,8 @@
 package javabasics._17;
 
+import java.sql.SQLOutput;
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         exercise1();
@@ -12,7 +15,7 @@ public class Main {
      */
     private static void exercise1() {
         System.out.println("Exercise 1: ");
-        int myBankBalanceEuro = 500;
+        long myBankBalanceEuro = 500L;
 
         String suspiciousEmailMessage =
                 """
@@ -24,9 +27,12 @@ public class Main {
                             Thanks
                 """;
 
-        long questionableFundsEuro = 5_000_000_000l;
+        long questionableFundsEuro = 5_000_000_000L;
 
         //Add the questionable funds to your bank balance and print it out!
+        myBankBalanceEuro += questionableFundsEuro;
+        System.out.println(myBankBalanceEuro);
+
 
     }
 
@@ -41,13 +47,14 @@ public class Main {
      *    short = -32,768 to 32,768
      *    byte = -127 to 127
      *
-     *    2a: Someone's age
-     *    2b: The age of a baby in months
-     *    2c: Money in a hedgefund in euros
-     *    2d: Price of a good in euros on amazon.com
-     *    2e: The exact weight of an apple measured by scientific equipment
-     *    2f: The number of kilometers from any 2 places in the world
+     *    2a: Someone's age                                                       short
+     *    2b: The age of a baby in months                                         byte
+     *    2c: Money in a hedgefund in euros                                       long or float
+     *    2d: Price of a good in euros on amazon.com                              float
+     *    2e: The exact weight of an apple measured by scientific equipment       double
+     *    2f: The number of kilometers from any 2 places in the world             in order to consider the meters too, I can use the Double. If I consider only the km, maybe I use int
      */
+
 
     /**
      * 3: Use the LOCALDATE type (LocalDate.now()) to print out the current date
@@ -64,5 +71,23 @@ public class Main {
      */
     public static void exercise3() {
         System.out.println("Exercise 3:");
+
+        LocalDate date= LocalDate.now();
+        System.out.println(date.getDayOfMonth());
+        System.out.println(date.getDayOfWeek());
+        System.out.println(date.getDayOfYear());
+        System.out.println(date.getMonth());
+        System.out.println(date.getMonthValue());
+        System.out.println(date.getYear());
+
+       LocalDate myBirthday = LocalDate.of(1998,11,11);
+
+       LocalDate libertyOfItaly = LocalDate.of(1945,4,25);
+        System.out.println(libertyOfItaly.getDayOfWeek());
+        System.out.println(myBirthday.getDayOfWeek());
+
+
+
+
     }
 }

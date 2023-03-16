@@ -22,19 +22,19 @@ public class Main {
         System.out.println("Exercise 1:");
         // Put this into a function
 
-/*        double celsius = 23;
-          double fahrenheit = ((celsius * 9) / 5) + 32;
- */       String conversionDescription = celsius + " Celsius is " + fahrenheit + " fahrenheit";
+//        double celsius = 23;
+//        double fahrenheit = ((celsius * 9) / 5) + 32;
+//        String conversionDescription = celsius + " Celsius is " + fahrenheit + " fahrenheit";
         // End
-        converterCelsiusToFahrenheit(celsius);
-        System.out.println(conversionDescription);
+        converterCelsiusToFahrenheit(20);
+        //   System.out.println(conversionDescription);
     }
-    //my function
-    static double converterCelsiusToFahrenheit(double gradeInCelsius) {
 
-        double fahrenheit = ((gradeInCelsius * 9) / 5) + 32;
+    //my function
+    static void converterCelsiusToFahrenheit(double celsius) {
+        double fahrenheit = ((celsius * 9) / 5) + 32;
         String conversionDescription = celsius + " Celsius is " + fahrenheit + " fahrenheit";
-        return fahrenheit;
+        System.out.println(conversionDescription);
     }
 
     /**
@@ -84,6 +84,7 @@ public class Main {
         // Call your function
         printer(myLunchPrice, lunchType, description, weightInGrams);
     }
+
     //my function. I'm not sure is the right method to use, but I can't find another method.
     static void printer(double myLunchPrice, String lunchType, String description, int weightInGrams) {
         System.out.println(myLunchPrice + "\n" + lunchType + "\n" + description + "\n" + weightInGrams);
