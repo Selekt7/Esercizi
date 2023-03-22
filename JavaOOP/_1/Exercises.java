@@ -22,11 +22,10 @@ public class Exercises {
 
     /**
      * 2: use the class called 'Student', add variables
-     *    (class variables are called 'fields' or 'attributes')
-     *    called 'name' and 'age'
-     *
-     *    Using the function below set the student name and ages
-     *
+     * (class variables are called 'fields' or 'attributes')
+     * called 'name' and 'age'
+     * <p>
+     * Using the function below set the student name and ages
      */
     private static void exercise2() {
         System.out.println("Exercise 2:");
@@ -34,9 +33,9 @@ public class Exercises {
         List<Integer> studentAges = Arrays.asList(23, 31, 38);
 
         // Use a for i loop
-        for (int i =0 ;i<studentAges.size();i++){
-            Student student=createNewStudent(studentNames.get(i),studentAges.get(i));
-            System.out.println("The student name is "+student.getName()+", the student age is "+student.getAge());
+        for (int i = 0; i < studentAges.size(); i++) {
+            Student student = createNewStudent(studentNames.get(i), studentAges.get(i));
+            System.out.println("The student name is " + student.getName() + ", the student age is " + student.getAge());
         }
     }
 
@@ -45,8 +44,8 @@ public class Exercises {
 
         // Write your code here
 
-       student.setName(name);
-       student.setAge(age);
+        student.setName(name);
+        student.setAge(age);
 
         return student;
     }
@@ -68,22 +67,29 @@ public class Exercises {
         System.out.println("\nExercise 3:");
 
         // Write your code here
-        List<String> studentNames = Arrays.asList("Alice", "Aragon", "Alex");
-        List<Integer> studentAges = Arrays.asList(23, 31, 38);
-        Course course= new Course();
+        List<String> studentNames = Arrays.asList("Alice", "Aragon", "Alex", "Pippo");
+        List<Integer> studentAges = Arrays.asList(23, 31, 38, 24);
+        Course course = new Course();
 
         // Use a for i loop
-        for (int i =0 ;i<studentAges.size();i++){
-            Student student=createNewStudent(studentNames.get(i),studentAges.get(i));
+        for (int i = 0; i < studentAges.size(); i++) {
+            Student student = createNewStudent(studentNames.get(i), studentAges.get(i));
             //System.out.println("The student name is "+student.getName()+", the student age is "+student.getAge());
 
             course.students.add(student);
         }
-            for (Student i : course.students ){
-                System.out.println(i.getName()+" "+i.getAge());
-            }
 
-            //I found some difficult to print the array. I think it prints me the path if i try to write System.out.println(course.students)
+        for (Student i : course.students) {
+            System.out.println(i.getName() + " " + i.getAge());
+        }
+
+        double averegeAge = 0;
+        for (int age : studentAges) {
+            averegeAge += age;
+        }
+        averegeAge = averegeAge / studentAges.size();
+        System.out.println(averegeAge);
+        //I found some difficult to print the array. I think it prints me the path if i try to write System.out.println(course.students)
 
     }
 }

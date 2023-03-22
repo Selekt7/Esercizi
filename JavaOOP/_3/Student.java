@@ -75,6 +75,17 @@ public class Student {
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", isOffSite=" + isOffSite +
+                ", favoriteSubject='" + favoriteSubject + '\'' +
+                ", voteInDecimal=" + voteInDecimal +
+                ", voteRegister=" + voteRegister +
+                ", counterChangeSite=" + counterChangeSite +
+                '}';
+    }
 }
 

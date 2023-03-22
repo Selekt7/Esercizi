@@ -5,10 +5,6 @@ public class Student {
     private Integer age;
 
 
-
-
-
-
     public String getName() {
         return name;
     }
