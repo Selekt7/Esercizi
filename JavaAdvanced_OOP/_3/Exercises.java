@@ -88,11 +88,6 @@ public class Exercises {
             }
         }
         System.out.println(wordCount);
-        Map<Integer, String > map = new TreeMap<>();
-        map.put(100, "afric");
-        map.put(158, "ita");
-        map.put(89, "quello");
-        System.out.println(map);
     }
 
     /**
