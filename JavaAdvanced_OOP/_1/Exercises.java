@@ -1,150 +1,93 @@
 package JavaAdvanced_OOP._1;
 
-
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Exercises {
-
     public static void main(String[] args) {
         exercise1();
         exercise2();
         exercise3();
-        exercise4();
     }
 
     /**
      * 1:
      * <p>
-     * 1. Add some numbers (1, 1, 5, 2, 1) to the set using the add() method.
-     * 2. Remove '1' from  the set using the .remove(1)
-     * 3. Print the set again to confirm the element was removed.
+     * <p>
+     * Create a class called "Dog" that extends the Animal class.
+     * <p>
+     * Add a new field called "breed" to the Dog class.
+     * <p>
+     * Write a constructor for the Dog class that takes in a breed, height, and weight as parameters, and passes the height and weight to the superclass constructor.
+     * <p>
+     * Write getters and setters for the breed field.
      */
     private static void exercise1() {
-        System.out.println("Exercise 1: ");
-        Set<Integer> ourSet = new HashSet<>();
-
-        // Add some numbers using the add method
-        // Your code
-        ourSet.add(1);
-        ourSet.add(1);
-        ourSet.add(5);
-        ourSet.add(2);
-        ourSet.add(1);
-
-        if (ourSet.containsAll(Set.of(5, 2, 1))) {
-            System.out.println("1a. Set contains all numbers");
-        } else {
-            System.out.println("1a. Set does not contain all numbers");
-        }
-
-        System.out.println(ourSet);
-
-        // Remove the element '1'
-        // Your code
-        ourSet.remove(1);
-
-        System.out.println(ourSet);
-
-        if (ourSet.contains(1)) {
-            System.out.println("1b. The set still contains 1");
-        } else {
-            System.out.println("1b. The set does not contain 1");
-        }
+        System.out.println("\nExercise 1: ");
+        // Your code here
+        Dog paco = new Dog(70.0, 42.0, "MaremmaShepherd-Labrador");
+        System.out.println(paco);
     }
 
     /**
      * 2:
      * <p>
-     * Read the comments below and write comments on what you think our print statement will output!
+     * <p>
+     * Create new classes called "Fish" and "Bird" that extends the Animal class.
+     * <p>
+     * Add a new field called "species" to the Fish class and "wingSpan" to the Bird class.
+     * <p>
+     * Also create constructors, getters and setters
      */
     private static void exercise2() {
-        Set<String> fruitsSet = new HashSet<>();
-
-        fruitsSet.add("apple");
-        fruitsSet.add("banana");
-        fruitsSet.add("orange");
-        fruitsSet.add("kiwi");
-        fruitsSet.add("mango");
-
-
-        fruitsSet.addAll(fruitsSet);
-
-        //2a. What will this output? [Write your guesses in here] Mi aspetto una raccolta disordinata contenente gli elementi inseriti da riga 64 a 68.
-        System.out.println(fruitsSet);
-
-        List<String> fruitsList = List.of("apple", "banana", "grapes", "pear", "mango");
-
-        fruitsSet.addAll(fruitsList);
-
-        //2b. What will this output? [Write your guesses in here] Mi aspetto una raccolta disordinata contenente gli elementi inseriti da riga 64 a 68
-        // e quelli della fruitsList a riga 75, ma presi una volta sola, senza doppioni.
-        System.out.println(fruitsSet);
+        System.out.println("\nExercise 2: ");
+        // Your code here
+        Fish nemo = new Fish(5, 0.3, "pagliaccio");
+        Bird titti = new Bird(8, 0.1, 20);
+        System.out.println(titti + "\n" + nemo);
     }
 
+
     /**
-     * 3: Write code to solve the following problems
+     * 3:
+     * <p>
+     * In the dog class create a method called runSpeedMetersPerSecond() that returns the Dog's Height * 2
+     * In the fish class create a method called swimSpeedMetersPerSecond() that returns the Fish's Weight * 2
+     * In the bird class create a method called flySpeedMetersPerSecond() that returns the Bird's Wingspan * 4
+     * <p>
+     * Create instances of each Animal: Dog, Fish and Bird. Fill the constructors with values of your choice
+     * and print out which of the animals has the fastest movement speed in MetersPerSecond
      */
     private static void exercise3() {
-        // 3a. Find the min and max values in the Set below
-        Set<Integer> numbers = Set.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
+        System.out.println("\nExercise 3: ");
+        // Your code here
+        List<Animal> animals = new ArrayList<>();
+        Dog paco = new Dog(70.0, 42.0, "MaremmaShepherd-Labrador");
+        Fish nemo = new Fish(5, 0.3, "Pagliaccio");
+        Bird titti = new Bird(8, 0.1, 20);
+        Bird aquila= new Bird(1, 10, 750);
+
+        animals.add(paco);
+        animals.add(nemo);
+        animals.add(titti);
+        animals.add(aquila);
 
 
-        for (Integer number : numbers) {
-            // Your code
-            max=Math.max(number, max);
-            min=Math.min(number, min);
+        paco.runSpeedMetersPerSecond();
+        nemo.swimSpeedMetersPerSecond();
+        titti.flySpeedMetersPerSecond();
+        aquila.flySpeedMetersPerSecond();
 
-        }
+        speedController(animals);
 
-        if (max != 10 || min != 1) {
-            System.out.println("3a. Incorrect min or max values");
-        }
 
-        // 3b. Find which items from set a are also in set b, add these to itemsContainedInBothSets
-        //     use the `contains` method and "nested" for loop
-        Set<Integer> setA = Set.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        Set<Integer> setB = Set.of(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
-        Set<Integer> itemsContainedInBothSets = new HashSet<>();
-
-        // Your code
-        for (Integer x:setA){
-            if (setB.contains(x)){
-                itemsContainedInBothSets.add(x);
-            }
-        }
-
-        if (!itemsContainedInBothSets.equals(Set.of(5, 6, 7, 8, 9, 10))) {
-            System.out.println("3b. Incorrect number of items in itemsContainedInBothSets");
-        } else {
-            System.out.println("3b. Correct number of items in itemsContainedInBothSets");
-        }
     }
 
-    /**
-     * 4: BONUS! This is an optional task, but it is recommended you complete it
-     * ----------------------------------------------------------------------
-     */
-    private static void exercise4() {
-        Set<Integer> orderedNumbers = new TreeSet<>();
-        orderedNumbers.addAll(Set.of(5, 3, 1, 2, 4, 6, 7, 8, 9, 10));
-        // 4a. Find the min value in the TreeSet with as few loops as possible,
-        //     you can use `break;` to exit the loop once you've found it!
-        int min = Integer.MAX_VALUE;
-        // Your code
-
-        // non credo sia il modo corretto. Tuttavia il treeset è ordinato. Quindi un treeset di int, per primo valore restituirà il più basso.
-        for(int x:orderedNumbers){
-            min=x;
-            break;
+    private static void speedController(List<Animal> animals) {
+        double fast = 0;
+        for (Animal animal : animals) {
+            fast = (Math.max(fast, animal.getSpeed()));
         }
-
-        if (min != 1) {
-            System.out.println("4a. Incorrect min value");
-        } else {
-            System.out.println("4a. Correct min value");
-        }
+        System.out.println(fast);
     }
 }
