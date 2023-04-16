@@ -28,7 +28,7 @@ public class Exercises {
         student.setIsOffSite(true);
         student.setVoteInDecimal(10);
         student.setFavoriteSubject("Math");
-        System.out.println(student.toString());
+        System.out.println(student);
         System.out.println(student.getAge());
         System.out.println(student.isOffSite());
         System.out.println(student.getVoteInDecimal());
@@ -55,9 +55,11 @@ public class Exercises {
         student.setIsOffSite(true);
         student.setIsOffSite(false);
         student.setIsOffSite(true);
-        int counter= student.getCounterChangeSite();
-        System.out.println(counter);
+        System.out.println("the counter is: "+Student.getCounterChangeSite());
+
         //Write your code here
+
+      
     }
 
 }

@@ -22,6 +22,7 @@ public class Exercises {
                 luckyRolls++;
             }
             totalCount+= luckyRolls;
+
         }
 
         System.out.println(totalCount);
