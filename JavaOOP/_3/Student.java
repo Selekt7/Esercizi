@@ -14,9 +14,9 @@ public class Student {
     private static int maxVote = 10;
     private List<Integer> voteRegister=new ArrayList<>();
 
-    private int counterChangeSite=0;
+    private static int counterChangeSite=0;
 
-    public int getCounterChangeSite() {
+    public static int getCounterChangeSite() {
         return counterChangeSite;
     }
 
@@ -75,6 +75,7 @@ public class Student {
         }
     }
 
+
     @Override
     public String toString() {
         return "Student{" +
@@ -87,5 +88,8 @@ public class Student {
                 ", counterChangeSite=" + counterChangeSite +
                 '}';
     }
+
+
+
 }
 
