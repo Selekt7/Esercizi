@@ -1,0 +1,44 @@
+//Creo la tabella
+CREATE TABLE INGREDIENT (
+  NAME VARCHAR(255),
+  CONTAINS_LACTOSE BOOLEAN,
+  VEGETARIAN BOOLEAN,
+  VEGAN BOOLEAN,
+  GLUTEN_FREE BOOLEAN
+);
+
+/*
+*Write insert statements to insert the following 5 ingredients:
+*Eggs
+*Bread
+*Beef Patty
+*Lettuce
+*Yoghurt
+*/
+
+INSERT INTO INGREDIENT(NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN,GLUTEN_FREE)
+VALUES('Egg',false, true,false,true);
+INSERT INTO INGREDIENT(NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN,GLUTEN_FREE)
+VALUES('Bread',false, true,false,false);
+INSERT INTO INGREDIENT(NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN,GLUTEN_FREE)
+VALUES('Beef Patty',false, false,false,false);
+INSERT INTO INGREDIENT(NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN,GLUTEN_FREE)
+VALUES('Lettuce',false, true,true,true);
+INSERT INTO INGREDIENT(NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN,GLUTEN_FREE)
+VALUES('Yogurt',true, true,false,true);
+
+//Write a SELECT statement to select the NAME of all the ingredients.
+
+SELECT NAME FROM INGREDIENT
+
+//Write a SELECT statement to select the NAME and the PRICE of the ingredients (uso vegan perché il prezzo non c'è)
+
+SELECT NAME, VEGAN FROM INGREDIENT
+
+//Write a SELECT statement to select all columns of ingredients, ordered by NAME
+
+SELECT * FROM INGREDIENT ORDER BY NAME
+
+//Write a SELECT statement to select all columns of ingredients, ordered by "GLUTEN_FREE" with the "true" items on top
+
+SELECT * FROM INGREDIENT ORDER BY GLUTEN_FREE DESC
