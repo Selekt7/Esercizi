@@ -1,0 +1,15 @@
+CREATE TABLE INGREDIENT(
+	NAME VARCHAR(255),
+	VEGETARIAN BOOLEAN,
+	VEGAN BOOLEAN,
+	CONTAINS_LACTOSE BOOLEAN
+);
+
+alter table ingredient add column calories int //per aggiungere una colonna che accetta int che si chiama calories.
+
+alter table INGREDIENT 
+MODIFY CONTAINS_LACTOSE BOOLEAN not null; //COSTRINGE AD AVERE UN VALORE NELLA COLONNA CONTAINS_LACTOSE.
+
+alter table ingredient
+add constraint unique(name);  //rende il nome unico. Nessuna riga puo avere lo stesso nome.
+

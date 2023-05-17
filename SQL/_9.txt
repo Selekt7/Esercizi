@@ -1,0 +1,66 @@
+Create your own customers table, make sure you create it with an auto_increment primary key.
+
+create table CUSTOMERS( 
+ID INT auto_increment,
+NAME VARCHAR(255),
+SURNAME VARCHAR(255),
+AGE INT,
+GRADE INT,
+primary KEY(ID)
+);
+
+Insert some customers with an insert statement.
+
+insert into CUSTOMERS(NAME, SURNAME, AGE, GRADE)
+values ('Gabriele', 'Ingrassia', 24, 3),
+('Pippo', 'Paperolo', 35, 1);
+
+Edit these customers using the UPDATE statement with a WHERE clause referring to the id.
+
+update customers
+set grade=2
+where id=2;
+
+Delete some customers with delete from statement with a WHERE clause referring to the id.
+
+delete from customers
+where ID = 2;
+
+Delete all customers with a truncate statement.
+
+truncate customers ;
+
+
+Look at the tables below and write which column(s) you think would make a good primary key.
+
+Question
+
+CREATE TABLE Customers (
+ customer_id INT NOT NULL AUTO_INCREMENT,  //questa... anche perchè è esplicita xD
+ first_name VARCHAR(255) NOT NULL,
+ last_name VARCHAR(255) NOT NULL,
+ email VARCHAR(255) NOT NULL,
+ PRIMARY KEY (customer_id)
+);
+Question
+
+CREATE TABLE Products (
+ product_name VARCHAR(255) NOT NULL,         //questa piu o meno
+ product_description VARCHAR(255) NOT NULL,
+ product_price DECIMAL(10, 2) NOT NULL,
+ product_quantity INT NOT NULL
+);
+Question
+
+CREATE TABLE Orders (
+ order_id INT NOT NULL AUTO_INCREMENT,  //questa
+ customer_id INT NOT NULL,
+ expected_arrival_time DATE
+);
+9 - Question
+
+CREATE TABLE Product_Orders (
+ order_id INT NOT NULL AUTO_INCREMENT,    //questa
+ product_name VARCHAR(255) NOT NULL,
+ total_revenue DOUBLE
+);
