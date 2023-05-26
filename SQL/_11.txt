@@ -1,0 +1,44 @@
+INNER JOIN
+
+select m.NAME, i.NAME from meal m 
+inner join ingredient i on m.MEAL_ID = i.MEAL_ID;
+
+LEFT JOIN THAT INCLUDES
+
+select m.Name, i.Name from meal m 
+left join ingredient i on m.MEAL_ID= i.MEAL_ID 
+
+LEFT JOIN FOR NULL KEY
+
+select m.Name, i.Name from meal m 
+left join ingredient i on m.MEAL_ID = i.MEAL_ID
+where i.MEAL_ID is null 
+
+RIGHT JOIN THAT INCLUDES
+
+select m.Name, i.Name from meal m 
+right join ingredient i on m.MEAL_ID = i.MEAL_ID;
+
+RIGHT JOIN FOR NULL KEY
+
+select m.Name, i.Name from meal m 
+right join ingredient i on m.MEAL_ID = i.MEAL_ID
+where i.MEAL_ID is null 
+
+FULLOUTER JOIN
+
+select m.Name, i.Name from meal m 
+left join ingredient i on m.MEAL_ID = i.MEAL_ID
+union 
+select m.Name, i.Name from meal m 
+right join ingredient i on m.MEAL_ID = i.MEAL_ID;
+
+FULLOUTER JOIN FOR NULL KEY
+
+select m.Name, i.Name from meal m 
+left join ingredient i on m.MEAL_ID = i.MEAL_ID
+where i.MEAL_ID is null or m.MEAL_ID is null 
+union 
+select m.Name, i.Name from meal m 
+right join ingredient i on m.MEAL_ID = i.MEAL_ID
+where i.MEAL_ID is null or m.MEAL_ID is null ;
